@@ -1,9 +1,9 @@
-package com.example.taskmanager.Task;
+package com.example.lab23.Task;
 
-import com.example.taskmanager.Task.dto.UpdateTaskDto;
-import com.example.taskmanager.Task.errors.TaskNameAlreadyTaken;
-import com.example.taskmanager.Task.errors.TaskNotFoundException;
-import com.example.taskmanager.Task.utils.DateParser;
+import com.example.lab23.Task.dto.UpdateTaskDto;
+import com.example.lab23.Task.errors.TaskNameAlreadyTaken;
+import com.example.lab23.Task.errors.TaskNotFoundException;
+import com.example.lab23.Task.utils.DateParser;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
