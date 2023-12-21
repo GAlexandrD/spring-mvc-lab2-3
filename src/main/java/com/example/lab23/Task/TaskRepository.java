@@ -1,6 +1,6 @@
-package com.example.taskmanager.Task;
+package com.example.lab23.Task;
 
-import com.example.taskmanager.Task.dto.UpdateTaskDto;
+import com.example.lab23.Task.dto.UpdateTaskDto;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 

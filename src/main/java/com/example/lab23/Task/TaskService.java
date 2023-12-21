@@ -1,7 +1,7 @@
-package com.example.taskmanager.Task;
+package com.example.lab23.Task;
 
-import com.example.taskmanager.Task.dto.CreateTaskDto;
-import com.example.taskmanager.Task.dto.UpdateTaskDto;
+import com.example.lab23.Task.dto.CreateTaskDto;
+import com.example.lab23.Task.dto.UpdateTaskDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
