@@ -2,7 +2,6 @@ package com.example.lab23.Task;
 
 import com.example.lab23.Task.dto.CreateTaskDto;
 import com.example.lab23.Task.dto.UpdateTaskDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.Objects;
 public class TaskService {
     private final TaskRepository taskRepository;
 
-    @Autowired
     public TaskService(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
