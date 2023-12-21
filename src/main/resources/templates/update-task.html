@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form action="task-updated">
+    id: <input th:value="${task.id}" type="number" required name="id"><br>
+    Task: <input type="text" name="taskName"><br>
+    Deadline: <input type="text" name="deadline"><br>
+    Priority: <input type="number" name="priority"><br>
+    <input type="submit">
+  </form>
+</body>
+</html>

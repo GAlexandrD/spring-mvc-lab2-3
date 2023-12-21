@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/task-list-sorted">
+        <label>
+            <select name="sort">
+                <option value="default">default</option>
+                <option value="priority">priority</option>
+                <option value="deadline">deadline</option>
+            </select>
+        </label>
+        <button type="submit">sort</button>
+    </form>
+    <div th:switch="${tasks.size()}">
+        <div th:case="0">No tasks</div>
+        <ul th:case="*">
+            <li th:each="task: ${tasks}">
+                <div>
+                    Id: <span th:text="${task.id}"></span>
+                    <br>TaskName: <span th:text="${task.name}"></span>
+                    <br>Deadline: <span th:text="${task.deadline}"></span>
+                    <br>Priority: <span th:text="${task.priority}"></span>
+                    <br><span style="color: green" th:if="${task.done}">Done</span>
+                    <form th:if="${!task.done}" style="display: inline" action="/mark-done">
+                        <button style="display: inline" type="submit" name="taskId" th:value="${task.id}">mark as done</button>
+                    </form>
+                    <form action="/delete"><button type="submit" name="taskId" th:value="${task.id}">Delete</button></form>
+                    <form action="/update-task"><button type="submit" name="taskId" th:value="${task.id}">Update</button></form>
+                </div><br>
+            </li>
+        </ul>
+    </div>
+    <form action="/create-task"><button type="submit">create new task</button></form>
+</body>
+</html>
